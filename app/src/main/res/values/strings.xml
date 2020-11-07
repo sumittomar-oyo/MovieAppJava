@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TmdbClone</string>
+    <string name="main_first_button">Now Playing</string>
+    <string name="main_second_button">Most Popular</string>
+    <string name="main_third_button">Top Rated</string>
+    <string name="see_all">See All</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
