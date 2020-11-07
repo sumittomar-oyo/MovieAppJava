@@ -1,12 +1,12 @@
-package com.example.tmdbclone.model;
+package com.example.tmdbclone.data_source.db;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
 @Entity
-public class Movie {
+public class MovieEntity implements Serializable {
     private String title;
     @PrimaryKey
     private int id;
@@ -14,15 +14,6 @@ public class Movie {
     private String poster_path;
     private String backdrop_path;
 
-    public Movie(){
-    }
-    public Movie(int id, String title,String overview,String poster_path,String backdrop_path){
-        this.id= id;
-        this.title = title;
-        this.overview = overview;
-        this.poster_path = poster_path;
-        this.backdrop_path = backdrop_path;
-    }
 
     public String getTitle() {
         return title;
@@ -53,7 +44,7 @@ public class Movie {
     }
 
     public void setOverview(String overview) {
-                this.overview = overview;
+        this.overview = overview;
     }
 
     public String getPoster_path() {
@@ -63,4 +54,5 @@ public class Movie {
     public void setPoster_path(String urlToImage) {
         this.poster_path = urlToImage;
     }
+
 }

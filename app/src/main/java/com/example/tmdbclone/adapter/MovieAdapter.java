@@ -43,10 +43,10 @@ public class MovieAdapter extends PagedListAdapter<Movie, MovieAdapter.ViewHolde
             viewHolder.movieTitle.setText(movie.getTitle());
             viewHolder.movieId.setText(movie.getId()+"");
             viewHolder.movieOverView.setText(movie.getOverview());
-            Log.e("rrr", ArticleMovieConstants.BASE_IMAGE+movie.getPosterPath());
+            Log.e("rrr", ArticleMovieConstants.BASE_IMAGE+movie.getPoster_path());
 
             Glide.with(mCtx)
-                    .load(ArticleMovieConstants.BASE_IMAGE+movie.getPosterPath())
+                    .load(ArticleMovieConstants.BASE_IMAGE+movie.getPoster_path())
                     .into(viewHolder.imgViewMoviesCover);
 
         } else {

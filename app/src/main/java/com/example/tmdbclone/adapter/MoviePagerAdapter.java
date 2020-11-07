@@ -48,7 +48,7 @@ public class MoviePagerAdapter extends PagerAdapter {
         textView2.setText(movies.get(position).getOverview());
         textView3.setText(movies.get(position).getId()+"");
         Glide.with(activity)
-                .load(ArticleMovieConstants.BASE_IMAGE+movies.get(position).getPosterPath())
+                .load(ArticleMovieConstants.BASE_IMAGE+movies.get(position).getPoster_path())
                 .into(imageView);
 
         ViewPager viewPager = (ViewPager) container;

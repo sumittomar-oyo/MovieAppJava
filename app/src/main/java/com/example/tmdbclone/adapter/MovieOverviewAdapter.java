@@ -49,7 +49,7 @@ public class MovieOverviewAdapter extends RecyclerView.Adapter<RecyclerView.View
         Movie movie = movieList.get(position);
         RecyclerViewViewHolder recyclerViewViewHolder  = (RecyclerViewViewHolder)holder;
         Glide.with(context)
-                .load(ArticleMovieConstants.BASE_IMAGE+movie.getPosterPath())
+                .load(ArticleMovieConstants.BASE_IMAGE+movie.getPoster_path())
                 .into(recyclerViewViewHolder.imageView);
 
         recyclerViewViewHolder.textViewId.setText(movie.getId()+"");

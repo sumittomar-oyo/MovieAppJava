@@ -28,6 +28,7 @@ import com.example.tmdbclone.adapter.MoviePagerAdapter;
 import com.example.tmdbclone.model.Movie;
 import com.example.tmdbclone.utility.SliderTimer;
 import com.example.tmdbclone.view_model.MovieOverviewViewModel;
+import com.example.tmdbclone.view_model.MovieOverviewViewModel2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
     Button nowPlayingButton;
     Button ratingButton;
     RecyclerView popularOverview;
-    MovieOverviewViewModel movieOverviewViewModel;
+    MovieOverviewViewModel2 movieOverviewViewModel;
     MovieOverviewAdapter movieOverviewAdapter;
     MoviePagerAdapter moviePagerAdapter;
     ViewPager viewPager;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
         popularOverview = findViewById(R.id.popularOverview);
         popularOverview.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         viewPager = findViewById(R.id.viewPager);
-        movieOverviewViewModel = ViewModelProviders.of(this).get(MovieOverviewViewModel.class);
+        movieOverviewViewModel = ViewModelProviders.of(this).get(MovieOverviewViewModel2.class);
         movieOverviewViewModel.getMovieMutableLiveData().observe(this,movieListUpdateObserver);
         timer = new Timer();
 
